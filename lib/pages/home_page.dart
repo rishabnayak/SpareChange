@@ -23,7 +23,7 @@ class HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: MeSuiteColors.blue,
+          backgroundColor: Colors.blueAccent,
           title: Text('Dashboard',
               style: TextStyle(
                   color: Colors.white,
@@ -48,24 +48,25 @@ class HomePageState extends State<HomePage> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
-                            Text('Hello! Your SpareChange account value is:',
-                                style: TextStyle(
-                                    color: Colors.blueAccent, fontSize: 10.0)),
+                            Text('Hello! Your SpareChange',
+                                style: TextStyle(color: Colors.black, fontWeight: FontWeight.w700, fontSize: 20.0)),
+                            Text('account value is:',
+                                style: TextStyle(color: Colors.black, fontWeight: FontWeight.w700, fontSize: 20.0)),
                             Text('\$18.75',
                                 style: TextStyle(
-                                    color: Colors.black,
+                                    color: Colors.blueAccent,
                                     fontWeight: FontWeight.w700,
                                     fontSize: 28.0))
                           ],
                         ),
                         Material(
-                            color: Colors.blue,
+                            color: Colors.blueAccent,
                             borderRadius: BorderRadius.circular(24.0),
                             child: Center(
                                 child: Padding(
-                              padding: const EdgeInsets.all(16.0),
+                              padding: const EdgeInsets.all(20.0),
                               child: Icon(Icons.timeline,
-                                  color: Colors.white, size: 30.0),
+                                  color: Colors.white, size: 25.0),
                             )))
                       ])),
             ),
@@ -80,34 +81,85 @@ class HomePageState extends State<HomePage> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
-                          Text('Shop Items',
-                              style: TextStyle(color: Colors.redAccent)),
-                          Text('173',
+                          Text('Donate, ya shmucks!', style: TextStyle(color: Colors.black, fontWeight: FontWeight.w700, fontSize: 24.0)),
+                        ],
+                      ),
+                      Material(
+                          color: Colors.blueAccent,
+                          borderRadius: BorderRadius.circular(24.0),
+                          child: Center(
+                              child: Padding(
+                            padding: EdgeInsets.all(16.0),
+                            child: Icon(Icons.hotel,
+                                color: Colors.white, size: 30.0),
+                          )))
+                    ])),
+              ),
+              _buildTile(
+              Padding(
+                padding: const EdgeInsets.all(24.0),
+                child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Text('Transcation History',
+                              style: TextStyle(color: Colors.black, fontWeight: FontWeight.w700, fontSize: 24.0)),
+                        ],
+                      ),
+                      Material(
+                          color: Colors.blueAccent,
+                          borderRadius: BorderRadius.circular(24.0),
+                          child: Center(
+                              child: Padding(
+                            padding: EdgeInsets.all(16.0),
+                            child: Icon(Icons.history,
+                                color: Colors.white, size: 30.0),
+                          )))
+                    ])),
+              ),
+            _buildTile(
+              Padding(
+                padding: const EdgeInsets.all(24.0),
+                child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                         Text('Your Total Donations:',
+                              style: TextStyle(color: Colors.black, fontWeight: FontWeight.w700, fontSize: 24.0)),
+                          Text('5',
                               style: TextStyle(
-                                  color: Colors.black,
+                                  color: Colors.blueAccent,
                                   fontWeight: FontWeight.w700,
                                   fontSize: 34.0))
                         ],
                       ),
                       Material(
-                          color: Colors.red,
+                          color: Colors.blueAccent,
                           borderRadius: BorderRadius.circular(24.0),
                           child: Center(
                               child: Padding(
                             padding: EdgeInsets.all(16.0),
-                            child: Icon(Icons.store,
+                            child: Icon(Icons.stars,
                                 color: Colors.white, size: 30.0),
                           )))
-                    ]),
-              ),
-            )
+                    ])),
+              ),   
+              
           ],
           staggeredTiles: [
-            StaggeredTile.extent(2, 110.0),
-            StaggeredTile.extent(2, 110.0),
-            StaggeredTile.extent(1, 180.0),
-            StaggeredTile.extent(2, 220.0),
-            StaggeredTile.extent(2, 110.0),
+            StaggeredTile.extent(2, 200.0),
+            StaggeredTile.extent(2, 135.0),
+            StaggeredTile.extent(2, 135.0),
+            StaggeredTile.extent(2, 135.0),
+            StaggeredTile.extent(2, 135.0),
           ],
         ));
   }

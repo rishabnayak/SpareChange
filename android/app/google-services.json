@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "824561832777",
+    "firebase_url": "https://sparechange-pennapps.firebaseio.com",
+    "project_id": "sparechange-pennapps",
+    "storage_bucket": "sparechange-pennapps.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:824561832777:android:81a5d27d58705205430098",
+        "android_client_info": {
+          "package_name": "com.example.sparechange"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "824561832777-84jjb3vjfhdklhc2knh1v03q8ob46h62.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBC-v-UeKu8aTtDgv4ipFtWGZU6JKfljy8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "824561832777-84jjb3vjfhdklhc2knh1v03q8ob46h62.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "824561832777-5tanokr9bqa5uipbtml39rpl4poof6ug.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.sparechange"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

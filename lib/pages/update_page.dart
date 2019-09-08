@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:sparechange/constants/colors.dart';
 import 'package:sparechange/containers/registration/reg_form_container.dart';
 import 'package:sparechange/containers/drawer/drawer.dart';
 
@@ -12,7 +11,7 @@ class UpdatePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        backgroundColor: MeSuiteColors.blue,
+        backgroundColor: Colors.blueAccent,
         title: new Text(this.title),
       ),
       drawer: DrawerContainer(),

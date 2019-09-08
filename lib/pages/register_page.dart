@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:sparechange/constants/colors.dart';
 import 'package:sparechange/containers/registration/reg_form_container.dart';
 
 class RegisterPage extends StatelessWidget {
@@ -11,7 +10,7 @@ class RegisterPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        backgroundColor: MeSuiteColors.blue,
+        backgroundColor: Colors.blueAccent,
         automaticallyImplyLeading: false,
         title: new Text(this.title),
       ),

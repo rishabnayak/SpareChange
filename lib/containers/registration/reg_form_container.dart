@@ -4,7 +4,6 @@ import 'package:flutter_redux/flutter_redux.dart';
 import 'package:sparechange/models/app_state.dart';
 import 'package:redux/redux.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:sparechange/constants/colors.dart';
 import 'package:sparechange/actions/reg_actions.dart';
 import 'package:sparechange/keys/keys.dart';
 
@@ -103,6 +102,7 @@ class RegFormContainer extends StatelessWidget {
                   child: Builder(
                     builder: (context) {
                       return RaisedButton(
+                        textColor: Colors.white,
                         onPressed: () {
                           vm.update(
                               vm.currentUser.data['uid'],
@@ -113,7 +113,7 @@ class RegFormContainer extends StatelessWidget {
                               vm.bankNumController.text,
                               vm.squareChangeController.text);
                         },
-                        color: MeSuiteColors.blue,
+                        color: Colors.blueAccent,
                         child: Text('Submit'),
                       );
                     },

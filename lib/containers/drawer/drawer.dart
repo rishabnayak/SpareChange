@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:sparechange/constants/colors.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:sparechange/models/app_state.dart';
 import 'package:redux/redux.dart';
@@ -36,7 +35,7 @@ class DrawerContainer extends StatelessWidget {
         return new Drawer(
             child: Column(children: <Widget>[
           UserAccountsDrawerHeader(
-            decoration: BoxDecoration(color: MeSuiteColors.blue),
+            decoration: BoxDecoration(color: Colors.blueAccent),
             accountName: new Text(vm.name),
             accountEmail: new Text(vm.email),
             currentAccountPicture: CircleAvatar(

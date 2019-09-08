@@ -26,11 +26,7 @@ class HomePageState extends State<HomePage> {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.blueAccent,
-          title: Text('Dashboard',
-              style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.w700,
-                  fontSize: 25.0)),
+          title: new Text('Dashboard'),
         ),
         drawer: DrawerContainer(),
         body: StaggeredGridView.count(
@@ -170,7 +166,6 @@ class HomePageState extends State<HomePage> {
           ],
           staggeredTiles: [
             StaggeredTile.extent(2, 200.0),
-            StaggeredTile.extent(2, 135.0),
             StaggeredTile.extent(2, 135.0),
             StaggeredTile.extent(2, 135.0),
             StaggeredTile.extent(2, 135.0),

@@ -34,6 +34,7 @@ class HomePageState extends State<HomePage> {
         ),
         drawer: DrawerContainer(),
         body: StaggeredGridView.count(
+          physics: NeverScrollableScrollPhysics(),
           crossAxisCount: 2,
           crossAxisSpacing: 12.0,
           mainAxisSpacing: 12.0,

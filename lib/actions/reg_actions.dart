@@ -17,8 +17,7 @@ class UpdateDB {
       @required this.stt,
       @required this.number,
       @required this.banknum,
-      @required this.squarechange
-      });
+      @required this.squarechange});
 }
 
 class RunUpdateReducer {

@@ -7,24 +7,23 @@ class Home extends StatefulWidget {
   _HomeState createState() => _HomeState();
 }
 
-class _HomeState extends State<Home> with AutomaticKeepAliveClientMixin<Home>{
-
+class _HomeState extends State<Home> with AutomaticKeepAliveClientMixin<Home> {
   @override
   Widget build(BuildContext context) {
     super.build(context);
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.fromLTRB(10,15,0,0),
+        padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
         child: ListView(
           children: <Widget>[
             Container(
-              height: MediaQuery.of(context).size.height/1.2,
+              height: MediaQuery.of(context).size.height / 1.2,
               width: MediaQuery.of(context).size.width,
               child: ListView.builder(
                 primary: false,
                 shrinkWrap: true,
                 scrollDirection: Axis.horizontal,
-                itemCount: restaurants == null ? 0 :restaurants.length,
+                itemCount: restaurants == null ? 0 : restaurants.length,
                 itemBuilder: (BuildContext context, int index) {
                   Map restaurant = restaurants[index];
                   return Padding(
@@ -44,10 +43,8 @@ class _HomeState extends State<Home> with AutomaticKeepAliveClientMixin<Home>{
         ),
       ),
     );
-
   }
 
   @override
   bool get wantKeepAlive => true;
-
 }

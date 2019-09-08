@@ -6,15 +6,13 @@ class SlideItem extends StatefulWidget {
 
   final String img;
   final String title;
-  final String address;
-  final String rating;
+  final String mission;
 
   SlideItem({
     Key key,
     @required this.img,
     @required this.title,
-    @required this.address,
-    @required this.rating,
+    @required this.mission,
   })
       : super(key: key);
 
@@ -68,7 +66,7 @@ createAlertDialog(BuildContext context) {
                       ),
                       child: Image.asset(
                         "${widget.img}",
-                        fit: BoxFit.cover,
+                        fit: BoxFit.fitWidth,
                       ),
                     ),
                   ),
@@ -82,7 +80,7 @@ createAlertDialog(BuildContext context) {
                 child: Container(
                   width: MediaQuery.of(context).size.width,
                   child: Text(
-                    "${widget.title}",
+                    "${widget.title}", overflow: TextOverflow.clip, softWrap: true,
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.w800,
@@ -99,9 +97,9 @@ createAlertDialog(BuildContext context) {
                 child: Container(
                   width: MediaQuery.of(context).size.width,
                   child: Text(
-                    "${widget.address}",
+                    "${widget.mission}",
                     style: TextStyle(
-                      fontSize: 12,
+                      fontSize: 8,
                       fontWeight: FontWeight.w300,
                     ),
                   ),
@@ -127,7 +125,7 @@ createAlertDialog(BuildContext context) {
             ],
           ),
         ),
-      ),
+      )
     );
   }
 }

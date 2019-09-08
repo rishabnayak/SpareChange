@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sparechange/pages/restaurants.dart';
+import 'package:sparechange/pages/nonprofits.dart';
 import 'package:sparechange/pages/slide_item.dart';
 
 class Home extends StatefulWidget {
@@ -24,16 +24,15 @@ class _HomeState extends State<Home> with AutomaticKeepAliveClientMixin<Home>{
                 primary: false,
                 shrinkWrap: true,
                 scrollDirection: Axis.horizontal,
-                itemCount: restaurants == null ? 0 :restaurants.length,
+                itemCount: nonprofits == null ? 0 :nonprofits.length,
                 itemBuilder: (BuildContext context, int index) {
-                  Map restaurant = restaurants[index];
+                  Map nonprofit = nonprofits[index];
                   return Padding(
                     padding: EdgeInsets.only(right: 10.0),
                     child: SlideItem(
-                      img: restaurant["img"],
-                      title: restaurant["title"],
-                      address: restaurant["address"],
-                      rating: restaurant["rating"],
+                      img: nonprofit["img"],
+                      title: nonprofit["title"],
+                      mission: nonprofit["mission"],
                     ),
                   );
                 },

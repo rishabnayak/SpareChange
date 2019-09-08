@@ -54,3 +54,41 @@ exports.viewBalanceSparechange = functions.https.onCall((data, context) => {
         })
     })
 })
+
+exports.getAccountHistory = functions.https.onCall((data,context) =>{
+    sparechangeAccount = data.sparechangeAccount
+    return new Promise(function (resolve, reject) {
+        var options = {
+            method: 'GET',
+            url: 'http://api.reimaginebanking.com/accounts/' + sparechangeAccount + '/transfers?type=payer',
+            qs: { key: apiKey }
+        }
+        request(options, function (error, response, body) {
+            if (error) {
+                reject(error);
+            }
+            else {
+                resolve(body)
+            }
+        })
+    })
+})
+
+exports.getDonationHistory = functions.https.onCall((data, context) => {
+    sparechangeAccount = data.sparechangeAccount
+    return new Promise(function (resolve, reject) {
+        var options = {
+            method: 'GET',
+            url: 'http://api.reimaginebanking.com/accounts/' + sparechangeAccount + '/transfers?type=payer',
+            qs: { key: apiKey }
+        }
+        request(options, function (error, response, body) {
+            if (error) {
+                reject(error);
+            }
+            else {
+                resolve(body)
+            }
+        })
+    })
+})

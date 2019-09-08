@@ -29,4 +29,4 @@ List restaurants = [
     "website": "http://www.detroitchildren.org/",
     "mission": "The Detroit Institute for Children (DIC) has been providing specialized diagnostic, medical and rehabilitative care to children with disabilities since 1920; however, The DIC's legacy of caring for children with disabilities dates back to 1904. Our mission is to care for children with physical or developmental disabilities, neurological or behavioral special needs in a way that is positive, passionate, integrated and family-centered so that the children can maximize their potential within their families and the community. A comprehensive array of services and programs provide a continuum of care for children and young adults with physical, neurological or developmental disabilities."
   },
-  
+];

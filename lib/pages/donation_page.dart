@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:cloud_functions/cloud_functions.dart';
 import 'package:sparechange/containers/drawer/drawer.dart';
 import 'package:sparechange/pages/home.dart';
 
@@ -13,11 +12,19 @@ class DonationPageState extends State<DonationPage> {
   @override
   Widget build(BuildContext context) {
         return Scaffold(
-                  appBar: AppBar(
+          appBar: AppBar(
+          elevation: 0.0,
+          title: new Text("Nonprofits"),
           backgroundColor: Colors.blueAccent,
-          title: new Text('Nonprofits'),
+          centerTitle: true,
+          automaticallyImplyLeading: false,
+          leading: IconButton(
+            icon: Icon(
+              Icons.arrow_back_ios
+            ),
+            onPressed: ()=>Navigator.pop(context),
+          ),
         ),
-        drawer: DrawerContainer(),
       body: PageView(
         physics: NeverScrollableScrollPhysics(),
         children: <Widget>[

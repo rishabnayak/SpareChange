@@ -3,6 +3,8 @@ import 'package:sparechange/constants/colors.dart';
 import 'package:sparechange/containers/drawer/drawer.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
+
+
 class HomePage extends StatefulWidget {
   @override
   HomePageState createState() => HomePageState();
@@ -153,6 +155,7 @@ class HomePageState extends State<HomePage> {
                     ])),
               ),   
               
+      
           ],
           staggeredTiles: [
             StaggeredTile.extent(2, 200.0),

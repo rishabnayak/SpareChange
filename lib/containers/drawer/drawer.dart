@@ -18,7 +18,7 @@ class DrawerContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     final drawerItems = [
       new DrawerItem("Home Page", Icons.home),
-      new DrawerItem("Update", Icons.update)
+      new DrawerItem("Account Info", Icons.account_circle)
     ];
     return new StoreConnector<AppState, _ViewModel>(
       converter: _ViewModel.fromStore,

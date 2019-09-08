@@ -37,7 +37,7 @@ class _SlideItemState extends State<SlideItem> {
               Stack(
                 children: <Widget>[
                   Container(
-                    height: MediaQuery.of(context).size.height/2.5,
+                    height: MediaQuery.of(context).size.height/1.6,
                     width: MediaQuery.of(context).size.width,
                     child: ClipRRect(
                       borderRadius: BorderRadius.only(
@@ -95,7 +95,7 @@ class _SlideItemState extends State<SlideItem> {
                 ],
               ),
 
-              SizedBox(height: 100.0),
+              SizedBox(height: 10.0),
 
             ],
           ),

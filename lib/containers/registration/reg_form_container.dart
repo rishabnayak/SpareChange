@@ -26,36 +26,33 @@ class RegFormContainer extends StatelessWidget {
                       vm.unameCheck(text);
                     },
                     decoration: new InputDecoration(
-                      prefixIcon: Icon(Icons.account_circle),
-                      hintText: "Username",
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(32))
-                      )
-                    ),
+                        prefixIcon: Icon(Icons.account_circle),
+                        hintText: "Username",
+                        border: OutlineInputBorder(
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(32)))),
                   ),
                 ),
                 new ListTile(
                   title: new TextField(
                     controller: vm.cityController,
                     decoration: new InputDecoration(
-                      prefixIcon: Icon(Icons.location_on),
-                      hintText: "City",
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(32))
-                      )
-                    ),
+                        prefixIcon: Icon(Icons.location_on),
+                        hintText: "City",
+                        border: OutlineInputBorder(
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(32)))),
                   ),
                 ),
                 new ListTile(
                   title: new TextField(
                     controller: vm.stateController,
                     decoration: new InputDecoration(
-                      prefixIcon: Icon(Icons.location_city),
-                      hintText: "State",
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(32))
-                      )
-                    ),
+                        prefixIcon: Icon(Icons.location_city),
+                        hintText: "State",
+                        border: OutlineInputBorder(
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(32)))),
                   ),
                 ),
                 new ListTile(
@@ -63,12 +60,11 @@ class RegFormContainer extends StatelessWidget {
                     keyboardType: TextInputType.number,
                     controller: vm.phoneController,
                     decoration: new InputDecoration(
-                      prefixIcon: Icon(Icons.contact_phone),
-                      hintText: "Contact",
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(32))
-                      )
-                    ),
+                        prefixIcon: Icon(Icons.contact_phone),
+                        hintText: "Contact",
+                        border: OutlineInputBorder(
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(32)))),
                   ),
                 ),
                 new ListTile(
@@ -76,12 +72,11 @@ class RegFormContainer extends StatelessWidget {
                     keyboardType: TextInputType.number,
                     controller: vm.bankNumController,
                     decoration: new InputDecoration(
-                      prefixIcon: Icon(Icons.account_balance),
-                      hintText: "Bank Account Number",
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(32))
-                      )
-                    ),
+                        prefixIcon: Icon(Icons.account_balance),
+                        hintText: "Bank Account Number",
+                        border: OutlineInputBorder(
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(32)))),
                   ),
                 ),
                 new ListTile(
@@ -89,12 +84,11 @@ class RegFormContainer extends StatelessWidget {
                     keyboardType: TextInputType.number,
                     controller: vm.squareChangeController,
                     decoration: new InputDecoration(
-                      prefixIcon: Icon(Icons.account_balance_wallet),
-                      hintText: "SquareChange Account Number",
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(32))
-                      )
-                    ),
+                        prefixIcon: Icon(Icons.account_balance_wallet),
+                        hintText: "SquareChange Account Number",
+                        border: OutlineInputBorder(
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(32)))),
                   ),
                 ),
                 Padding(
@@ -166,13 +160,8 @@ class _ViewModel {
             print("taken");
           }
         },
-        update: (String uid,
-            String uname,
-            String city,
-            String stt,
-            String number,
-            String banknum,
-            String squarechange) {
+        update: (String uid, String uname, String city, String stt,
+            String number, String banknum, String squarechange) {
           store.dispatch(UpdateDB(
               uid: uid,
               uname: uname,
@@ -196,7 +185,9 @@ class _ViewModel {
                 text: store.state.currentUser.data['stt'] ?? "",
                 selection: new TextSelection.collapsed(
                     offset: store.state.currentUser.data['stt']?.length ?? 0))),
-        phoneController: new TextEditingController.fromValue(new TextEditingValue(text: store.state.currentUser.data['number'] ?? "", selection: new TextSelection.collapsed(offset: store.state.currentUser.data['number']?.length ?? 0))),
+        phoneController: new TextEditingController.fromValue(new TextEditingValue(
+            text: store.state.currentUser.data['number'] ?? "",
+            selection: new TextSelection.collapsed(offset: store.state.currentUser.data['number']?.length ?? 0))),
         bankNumController: new TextEditingController.fromValue(new TextEditingValue(text: store.state.currentUser.data['banknum'] ?? "", selection: new TextSelection.collapsed(offset: store.state.currentUser.data['banknum']?.length ?? 0))),
         squareChangeController: new TextEditingController.fromValue(new TextEditingValue(text: store.state.currentUser.data['squarechange'] ?? "", selection: new TextSelection.collapsed(offset: store.state.currentUser.data['squarechange']?.length ?? 0))));
   }

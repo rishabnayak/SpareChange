@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sparechange/pages/const.dart';
+import 'dart:math';
 
 class SlideItem extends StatefulWidget {
 
@@ -22,6 +23,27 @@ class SlideItem extends StatefulWidget {
 }
 
 class _SlideItemState extends State<SlideItem> {
+
+createAlertDialog(BuildContext context) {
+
+     TextEditingController customController = TextEditingController();
+     return showDialog(context: context,builder: (context){
+        return AlertDialog(
+          title: Text("How much would you like to donate?"), 
+          content: TextField(
+            controller: customController,
+          ),
+          actions: <Widget> [
+            MaterialButton(
+              elevation: 5.0,
+              child: Text('Donate'),
+            )
+
+          ]
+        );
+     }); 
+   }
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -96,7 +118,9 @@ class _SlideItemState extends State<SlideItem> {
                     color: Colors.blueAccent,
                     shape: RoundedRectangleBorder( borderRadius: BorderRadius.circular(10.0)), 
                     child: Text("Donate"), 
-                    onPressed: (){},
+                    onPressed: (){
+                      createAlertDialog(context); 
+                    },
                   ),
                 ],
               ),

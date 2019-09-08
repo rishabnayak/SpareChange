@@ -151,7 +151,7 @@ class ReturningUserApp extends StatelessWidget {
         navigatorKey: AppKeys.navKey,
         debugShowCheckedModeBanner: false,
         routes: getRoutes(context, store),
-        initialRoute: '/donate',
+        initialRoute: '/',
       ),
     );
   }

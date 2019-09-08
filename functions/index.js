@@ -35,3 +35,22 @@ exports.transferRoundedMoney = functions.https.onCall((data, context) => {
         });
     });
 });
+
+exports.viewBalanceSparechange = functions.https.onCall((data, context) => {
+    sparechangeAccount = data.sparechangeAccount
+    return new Promise(function (resolve, reject) {
+        var options = { 
+            method: 'GET',
+            url: 'http://api.reimaginebanking.com/accounts/' + sparechangeAccount,
+            qs: { key: apiKey }
+        }   
+        request(options, function (error, response, body) {
+            if (error) {
+                reject(error);
+            }
+            else {
+                resolve(body)
+            }
+        })
+    })
+})

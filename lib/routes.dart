@@ -10,6 +10,7 @@ import 'package:sparechange/pages/donation_page.dart';
 import 'models/app_state.dart';
 import 'package:sparechange/pages/update_page.dart';
 
+
 Map<String, WidgetBuilder> getRoutes(context, store) {
   return {
     '/': (BuildContext context) => new StoreBuilder<AppState>(

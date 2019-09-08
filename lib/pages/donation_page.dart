@@ -15,7 +15,7 @@ class DonationPageState extends State<DonationPage> {
         return Scaffold(
                   appBar: AppBar(
           backgroundColor: Colors.blueAccent,
-          title: new Text('Donate'),
+          title: new Text('Nonprofits'),
         ),
         drawer: DrawerContainer(),
       body: PageView(

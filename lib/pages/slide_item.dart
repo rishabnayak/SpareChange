@@ -37,7 +37,7 @@ class _SlideItemState extends State<SlideItem> {
               Stack(
                 children: <Widget>[
                   Container(
-                    height: MediaQuery.of(context).size.height/2.5,
+                    height: MediaQuery.of(context).size.height/1.56,
                     width: MediaQuery.of(context).size.width,
                     child: ClipRRect(
                       borderRadius: BorderRadius.only(
@@ -91,12 +91,15 @@ class _SlideItemState extends State<SlideItem> {
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  RaisedButton(shape: RoundedRectangleBorder( borderRadius: BorderRadius.circular(10.0)), child: Text("data"), onPressed: (){},)
+                  RaisedButton(
+                    textColor: Colors.white,
+                    color: Colors.blueAccent,
+                    shape: RoundedRectangleBorder( borderRadius: BorderRadius.circular(10.0)), 
+                    child: Text("Donate"), 
+                    onPressed: (){},
+                  ),
                 ],
               ),
-
-              SizedBox(height: 100.0),
-
             ],
           ),
         ),

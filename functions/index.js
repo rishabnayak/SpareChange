@@ -47,7 +47,7 @@ exports.donateMoney = functions.https.onCall((data, context) => {
             qs: { key: apiKey },
             body: {
                 medium: 'balance',
-                amount: donateamount
+                amount: Math.abs(donateamount)
             },
             json: true
         };
@@ -86,7 +86,7 @@ exports.getAccountHistory = functions.https.onCall((data,context) =>{
     return new Promise(function (resolve, reject) {
         var options = {
             method: 'GET',
-            url: 'http://api.reimaginebanking.com/accounts/' + sparechangeAccount + '/transfers?type=payer',
+            url: 'http://api.reimaginebanking.com/accounts/' + sparechangeAccount + '/withdrawals',
             qs: { key: apiKey }
         }
         request(options, function (error, response, body) {
@@ -105,7 +105,7 @@ exports.getDonationHistory = functions.https.onCall((data, context) => {
     return new Promise(function (resolve, reject) {
         var options = {
             method: 'GET',
-            url: 'http://api.reimaginebanking.com/accounts/' + sparechangeAccount + '/transfers?type=payer',
+            url: 'http://api.reimaginebanking.com/accounts/' + sparechangeAccount + '/withdrawals',
             qs: { key: apiKey }
         }
         request(options, function (error, response, body) {

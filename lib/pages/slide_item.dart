@@ -41,6 +41,7 @@ class _SlideItemState extends State<SlideItem> {
                       },
                     ).then((onValue){
                       print(onValue.data);
+                      Navigator.pop(context);
                     });
               },
             )
@@ -65,7 +66,7 @@ class _SlideItemState extends State<SlideItem> {
               Stack(
                 children: <Widget>[
                   Container(
-                    height: MediaQuery.of(context).size.height / 1.56,
+                    height: MediaQuery.of(context).size.height / 1.8,
                     width: MediaQuery.of(context).size.width,
                     child: ClipRRect(
                       borderRadius: BorderRadius.only(
@@ -88,8 +89,8 @@ class _SlideItemState extends State<SlideItem> {
                   child: Text(
                     "${widget.title}", overflow: TextOverflow.clip, softWrap: true,
                     style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w800,
+                      fontSize: 23,
+                      fontWeight: FontWeight.w600,
                     ),
                     textAlign: TextAlign.left,
                   ),
@@ -101,9 +102,9 @@ class _SlideItemState extends State<SlideItem> {
                 child: Container(
                   width: MediaQuery.of(context).size.width,
                   child: Text(
-                    "${widget.mission}",
+                    "${widget.mission}", overflow: TextOverflow.clip, softWrap: true,
                     style: TextStyle(
-                      fontSize: 8,
+                      fontSize: 16,
                       fontWeight: FontWeight.w300,
                     ),
                   ),

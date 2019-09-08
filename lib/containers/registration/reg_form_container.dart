@@ -85,7 +85,7 @@ class RegFormContainer extends StatelessWidget {
                     controller: vm.squareChangeController,
                     decoration: new InputDecoration(
                         prefixIcon: Icon(Icons.account_balance_wallet),
-                        hintText: "SquareChange Account Number",
+                        hintText: "SpareChange Account Number",
                         border: OutlineInputBorder(
                             borderRadius:
                                 BorderRadius.all(Radius.circular(32)))),

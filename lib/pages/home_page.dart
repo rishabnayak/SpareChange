@@ -40,6 +40,7 @@ class HomePageState extends State<HomePage> {
                       },
                     ).then((onValue){
                       print(onValue.data);
+                      Navigator.pop(context);
                     });
               },
             )
@@ -111,6 +112,8 @@ class HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return new StoreConnector<AppState, _ViewModel>(
+        // onInit: (store) => store.dispatch(new InitAction()),
+        // onDispose: (store) => store.dispatch(new DisposeAction()),
         converter: _ViewModel.fromStore,
         builder: (BuildContext context, _ViewModel vm) {
           return Scaffold(
@@ -146,7 +149,7 @@ class HomePageState extends State<HomePage> {
                                         color: Colors.black,
                                         fontWeight: FontWeight.w700,
                                         fontSize: 20.0)),
-                                Text('account value is:',
+                                Text('account balance is:',
                                     style: TextStyle(
                                         color: Colors.black,
                                         fontWeight: FontWeight.w700,
@@ -170,7 +173,7 @@ class HomePageState extends State<HomePage> {
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
-                                    Text('Donate, ya shmucks!',
+                                    Text('Donate!',
                                         style: TextStyle(
                                             color: Colors.black,
                                             fontWeight: FontWeight.w700,
@@ -266,6 +269,9 @@ class HomePageState extends State<HomePage> {
                                         color: Colors.white, size: 30.0),
                                   )))
                             ])),
+                            onTap: (){
+                              Navigator.of(context).pushReplacementNamed("/");
+                            }
                   ),
                 ],
                 staggeredTiles: [

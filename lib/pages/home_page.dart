@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sparechange/constants/colors.dart';
+import 'package:cloud_functions/cloud_functions.dart';
 import 'package:sparechange/containers/drawer/drawer.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
@@ -69,6 +69,17 @@ class HomePageState extends State<HomePage> {
                                   color: Colors.white, size: 25.0),
                             )))
                       ])),
+              onTap: () => {
+                CloudFunctions.instance.getHttpsCallable(functionName: "transferRoundedMoney").call(
+                  <String, dynamic>{
+                    'spending': 1.23,
+                    'checkingAccount': "5d731182322fa016762f2fae",
+                    'sparechangeAccount': "5d73258b3c8c2216c9fcac3e",
+                  },
+                ).then((onValue){
+                  print(onValue.data);
+                })
+              },
             ),
             _buildTile(
               Padding(
